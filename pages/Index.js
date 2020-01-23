@@ -1,4 +1,4 @@
-import NavBar from '../components/navbar.js'
+import NavBar from '../components/NavBar.js'
 
 const Index = () => (
       <div>
