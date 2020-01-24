@@ -34,7 +34,7 @@ const Index = () => {
                   29R-03.com
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  FSA Organizer allows you to quickly asses Forensic Schedule
+                  FSA Organizer allows you to quickly assess Forensic Schedule
                   Analysis Methods. Used by Lawyers to examine and verify FSA
                   Methods. Used by Analysts to select the appropriate method and
                   create a custom report.
