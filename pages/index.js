@@ -10,7 +10,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 275,
+    maxWidth: 575,
     margin: 25
   },
   cardImage: {
@@ -25,7 +25,7 @@ const Index = () => {
     <div>
       <NavBar />
       <Grid container spacing={3} justify="space-evenly">
-        <Grid item xs={4}>
+        <Grid item xs>
           <Card className={classes.card} variant="outlined">
             <CardActionArea>
               <CardContent>
