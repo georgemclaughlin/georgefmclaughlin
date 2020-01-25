@@ -54,7 +54,6 @@ const Index = () => {
           </Card>
         </Grid>
       </Grid>
-      <div>test for Dillon</div>
     </div>
   );
 };
