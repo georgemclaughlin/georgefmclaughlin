@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
