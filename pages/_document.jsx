@@ -1,9 +1,9 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/styles'
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/styles";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
-const theme = responsiveFontSizes(createMuiTheme())
+const theme = responsiveFontSizes(createMuiTheme());
 
 class MyDocument extends Document {
   render() {
@@ -20,6 +20,20 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-157076206-1"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments)}
+        gtag("js", new Date());
+        gtag("config", "UA-157076206-1");
+    `
+            }}
+          ></script>
           <style jsx global>
             {`
               html,
@@ -33,7 +47,7 @@ class MyDocument extends Document {
                 box-sizing: border-box;
               }
               body {
-                font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                 font-size: 1rem;
                 margin: 0;
               }
@@ -45,21 +59,21 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
 MyDocument.getInitialProps = async ctx => {
   // Render app and page and get the context of the page with collected side effects.
-  const sheets = new ServerStyleSheets()
-  const originalRenderPage = ctx.renderPage
+  const sheets = new ServerStyleSheets();
+  const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: App => props => sheets.collect(<App {...props} />)
-    })
+    });
 
-  const initialProps = await Document.getInitialProps(ctx)
+  const initialProps = await Document.getInitialProps(ctx);
 
   return {
     ...initialProps,
@@ -70,7 +84,7 @@ MyDocument.getInitialProps = async ctx => {
         {sheets.getStyleElement()}
       </React.Fragment>
     ]
-  }
-}
+  };
+};
 
-export default MyDocument
+export default MyDocument;
