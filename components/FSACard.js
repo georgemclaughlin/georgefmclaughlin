@@ -6,6 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { makeStyles } from "@material-ui/core/styles";
+import * as gtag from '../lib/gtag'
 
 const useStyles = makeStyles({
     card: {
@@ -19,6 +20,14 @@ const useStyles = makeStyles({
   });
 
 const FSACard = () => {
+    const clickTracking = (e, label) => {
+        gtag.event({
+          clientWindow: window,
+          action: 'click',
+          category: 'link button',
+          label: label,
+        });
+      };
     const classes = useStyles();
   return (
           <Card className={classes.card} variant="outlined">
@@ -42,6 +51,7 @@ const FSACard = () => {
                 href="https://29r-03.com/"
                 size="small"
                 color="primary"
+                onClick={() => clickTracking('FSA Organizer Card')}
               >
                 Check it out
               </Button>

@@ -6,6 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { makeStyles } from "@material-ui/core/styles";
+import * as gtag from '../lib/gtag'
 
 const useStyles = makeStyles({
   card: {
@@ -19,6 +20,14 @@ const useStyles = makeStyles({
 });
 
 const CloudRunCard = () => {
+    const clickTracking = (e, label) => {
+        gtag.event({
+          clientWindow: window,
+          action: 'click',
+          category: 'link button',
+          label: label,
+        });
+      };
   const classes = useStyles();
   return (
     <Card className={classes.card} variant="outlined">
@@ -43,6 +52,7 @@ const CloudRunCard = () => {
           href="https://github.com/georgemclaughlin/reddit_posts_server"
           size="small"
           color="primary"
+          onClick={() => clickTracking('Cloud Run Card')}
         >
           Check it out
         </Button>

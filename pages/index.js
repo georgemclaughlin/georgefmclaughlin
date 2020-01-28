@@ -3,9 +3,7 @@ import FSACard from "../components/FSACard.js";
 import CloudRunCard from "../components/CloudRunCard.js";
 import Grid from "@material-ui/core/Grid";
 
-
 const Index = () => {
-  
   return (
     <div>
       <NavBar />
