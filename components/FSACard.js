@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   });
 
 const FSACard = () => {
-    const clickTracking = (e, label) => {
+    const clickTracking = (label) => {
         gtag.event({
           clientWindow: window,
           action: 'click',
