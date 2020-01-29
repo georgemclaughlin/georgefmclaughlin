@@ -8,10 +8,10 @@ const Index = () => {
     <div>
       <NavBar />
       <Grid container spacing={3} justify="space-evenly">
-        <Grid item xs>
+        <Grid item s>
           <FSACard />
           </Grid>
-          <Grid item xs>
+          <Grid item s>
           <CloudRunCard />
         </Grid>
       </Grid>
