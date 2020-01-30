@@ -41,7 +41,7 @@ const CloudRunCard = () => {
             Deploy to Google Cloud Run with GitHub Actions
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Sample project showing how to build a docker image of an API and
+            Sample project showing how to build a docker image of a Node.js API and
             deploy it to Google Cloud Run using GitHub Actions.
           </Typography>
         </CardContent>
