@@ -31,7 +31,9 @@ const FSACard = () => {
     const classes = useStyles();
   return (
           <Card className={classes.card} variant="outlined">
-            <CardActionArea>
+            <CardActionArea target="_blank"
+                href="https://29r-03.com/"
+                onClick={() => clickTracking('FSA Organizer Card')}>
               <CardContent>
                 <img className={classes.cardImage} src="/29r-03Logo.png" />
                 <Typography gutterBottom variant="h5" component="h2">

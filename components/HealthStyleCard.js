@@ -14,12 +14,12 @@ const useStyles = makeStyles({
     margin: 25
   },
   cardImage: {
-    maxWidth: "240px",
+    maxWidth: "120px",
      width: "100%"
   },
 });
 
-const CloudRunCard = () => {
+const HealthStyleCard = () => {
     const clickTracking = (label) => {
         gtag.event({
           clientWindow: window,
@@ -31,31 +31,27 @@ const CloudRunCard = () => {
   const classes = useStyles();
   return (
     <Card className={classes.card} variant="outlined">
-      <CardActionArea
-      target="_blank"
-      href="https://github.com/georgemclaughlin/reddit_posts_server"
-      onClick={() => clickTracking('Cloud Run Card')}>
+      <CardActionArea target="_blank" href="https://healthstyle.io/" onClick={() => clickTracking('HealthStyle Card')}>
         <CardContent>
           <img
             className={classes.cardImage}
-            src="/cloudRunAndGitHub.png"
+            src="/HealthStyleLogo.png"
           />
           <Typography gutterBottom variant="h5" component="h2">
-            Deploy to Google Cloud Run with GitHub Actions
+            HealthStyle.io
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Sample project showing how to build a docker image of a Node.js API and
-            deploy it to Google Cloud Run using GitHub Actions.
+            An application about diets and considerations when selecting a diet.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button
           target="_blank"
-          href="https://github.com/georgemclaughlin/reddit_posts_server"
+          href="https://healthstyle.io/"
           size="small"
           color="primary"
-          onClick={() => clickTracking('Cloud Run Card')}
+          onClick={() => clickTracking('HealthStyle Card')}
         >
           Check it out
         </Button>
@@ -64,4 +60,4 @@ const CloudRunCard = () => {
   );
 };
 
-export default CloudRunCard;
+export default HealthStyleCard;
