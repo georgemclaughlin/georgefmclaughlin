@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F3EFE5"/>
+  <rect x="36" y="36" width="1128" height="558" rx="32" fill="url(#paint0_linear)"/>
+  <circle cx="1035" cy="146" r="116" fill="#B6542F" fill-opacity="0.17"/>
+  <circle cx="184" cy="505" r="156" fill="#6D8B7F" fill-opacity="0.17"/>
+  <path d="M116 164H322" stroke="#1C1B19" stroke-opacity="0.2" stroke-width="2"/>
+  <text x="116" y="226" fill="#5F5A51" font-family="Space Grotesk, Arial, sans-serif" font-size="28" letter-spacing="4">GEORGE F. MCLAUGHLIN</text>
+  <text x="116" y="338" fill="#1C1B19" font-family="Georgia, serif" font-size="96">Builder, operator,</text>
+  <text x="116" y="430" fill="#1C1B19" font-family="Georgia, serif" font-size="96">product-minded engineer.</text>
+  <text x="116" y="510" fill="#5F5A51" font-family="Space Grotesk, Arial, sans-serif" font-size="32">Practical software, selected projects, cleaner static stack.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="71" y1="74" x2="1168" y2="594" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFCF5"/>
+      <stop offset="1" stop-color="#ECE5D6"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,165 @@
+---
+import type { Project } from "../config/projects";
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+---
+
+<article class="project card">
+  <div class="project-top">
+    <p class="project-meta">
+      <span>{project.category}</span>
+      <span>{project.status}</span>
+    </p>
+    <h3>{project.title}</h3>
+    <p class="summary">{project.summary}</p>
+  </div>
+  <div class="project-bottom">
+    <div
+      class:list={[
+        "image-wrap",
+        project.imageType === "screenshot" && "image-wrap-screenshot",
+        !project.image && "image-wrap-placeholder",
+      ]}
+    >
+      {project.image ? (
+        <img src={project.image} alt={`${project.title} logo or preview`} loading="lazy" />
+      ) : (
+        <div class="placeholder-mark" aria-hidden="true">
+          <span>{project.imageLabel ?? project.title}</span>
+        </div>
+      )}
+    </div>
+    <div class="project-links">
+      {project.siteLink ? (
+        <a href={project.siteLink} target="_blank" rel="noreferrer">
+          Site
+        </a>
+      ) : null}
+      {project.sourceLink ? (
+        <a href={project.sourceLink} target="_blank" rel="noreferrer">
+          Source
+        </a>
+      ) : null}
+    </div>
+  </div>
+</article>
+
+<style>
+  .project {
+    display: grid;
+    gap: 1.5rem;
+    min-height: 100%;
+    padding: 1.2rem;
+    box-shadow: none;
+  }
+
+  .project-top {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.45rem;
+    line-height: 1.15;
+  }
+
+  .summary {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .project-bottom {
+    display: grid;
+    gap: 1rem;
+    align-content: end;
+  }
+
+  .image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 120px;
+    padding: 1rem;
+    border-radius: 14px;
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+  }
+
+  .image-wrap img {
+    max-height: 72px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .image-wrap-screenshot {
+    align-items: stretch;
+    padding: 0.45rem;
+    overflow: hidden;
+  }
+
+  .image-wrap-screenshot img {
+    width: 100%;
+    max-height: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .image-wrap-placeholder {
+    justify-content: center;
+    background:
+      linear-gradient(135deg, rgba(122, 75, 42, 0.08), rgba(59, 92, 149, 0.08)),
+      var(--surface-strong);
+  }
+
+  .placeholder-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: min(100%, 190px);
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    text-align: center;
+  }
+
+  .placeholder-mark span {
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  a {
+    width: fit-content;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid currentColor;
+    font-weight: 500;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+  }
+</style>

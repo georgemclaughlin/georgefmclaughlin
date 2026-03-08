@@ -1,21 +1,27 @@
 {
   "name": "georgefmclaughlinsite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal portfolio for George F. McLaughlin",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "export": "next export"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "astro",
+    "portfolio",
+    "static-site"
+  ],
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.9.0",
-    "next": "^9.2.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-markdown": "^4.3.1"
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.18.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3"
   }
 }

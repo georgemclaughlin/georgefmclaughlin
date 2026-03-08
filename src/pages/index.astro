@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactPanel from "../components/ContactPanel.astro";
+import Hero from "../components/Hero.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { projects } from "../config/projects";
+---
+
+<BaseLayout>
+  <main>
+    <Hero />
+
+    <section id="projects" class="shell projects-section">
+      <SectionHeading
+        eyebrow="Selected work"
+        title="A few examples."
+        body="A small sample of product and technical work."
+      />
+
+      <div class="grid project-grid">
+        {
+          projects.map((project, index) => (
+            <div class:list={["fade-in", `delay-${index + 1}`]}>
+              <ProjectCard project={project} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="contact" class="shell contact-section">
+      <ContactPanel />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .projects-section {
+    padding-bottom: 4rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .contact-section {
+    padding-bottom: 4rem;
+  }
+
+  @media (max-width: 980px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

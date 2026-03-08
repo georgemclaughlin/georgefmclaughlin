@@ -1,0 +1,86 @@
+---
+import { siteConfig } from "../config/site";
+---
+
+<section class="contact card">
+  <div>
+    <span class="eyebrow">Contact</span>
+    <h3>Direct links.</h3>
+    <p>Keeping this simple for now.</p>
+  </div>
+  <div class="links">
+    {
+      siteConfig.links.map((link) => (
+        <a href={link.href} target="_blank" rel="noreferrer">
+          <span>{link.label}</span>
+          <strong>{link.href.replace("https://", "")}</strong>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.35rem;
+    box-shadow: none;
+  }
+
+  h3 {
+    margin: 1rem 0 0.7rem;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 0.95;
+  }
+
+  p {
+    max-width: 34rem;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .links {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .links a {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface-strong);
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .links a:hover,
+  .links a:focus-visible {
+    transform: translateY(-1px);
+    border-color: rgba(26, 31, 41, 0.24);
+  }
+
+  .links span {
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .links strong {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 800px) {
+    .contact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

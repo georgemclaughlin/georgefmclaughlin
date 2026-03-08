@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" rx="24" fill="#EEF2F5"/>
+  <rect x="10" y="10" width="620" height="340" rx="18" fill="#F3F6F8" stroke="#CFD7DE"/>
+  <text x="22" y="34" fill="#24313F" font-family="Arial, sans-serif" font-size="22" font-weight="700">Parametric Project Box</text>
+  <text x="22" y="50" fill="#607080" font-family="Arial, sans-serif" font-size="10">Generate printable body/lid STL files for small electronics enclosures.</text>
+  <line x1="10" y1="60.5" x2="630" y2="60.5" stroke="#D7DEE5"/>
+  <rect x="18" y="68" width="152" height="242" rx="12" fill="#E8EEF2" stroke="#D1D9E0"/>
+  <text x="28" y="88" fill="#314253" font-family="Arial, sans-serif" font-size="12" font-weight="700">Outer Dimensions (mm)</text>
+  <g fill="#6D7B8A" font-family="Arial, sans-serif" font-size="10">
+    <text x="28" y="112">Length</text>
+    <text x="28" y="136">Width</text>
+    <text x="28" y="160">Height</text>
+    <text x="28" y="184">Wall thickness</text>
+    <text x="28" y="208">Floor thickness</text>
+    <text x="28" y="232">Lid thickness</text>
+  </g>
+  <g>
+    <rect x="112" y="102" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+    <rect x="112" y="126" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+    <rect x="112" y="150" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+    <rect x="112" y="174" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+    <rect x="112" y="198" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+    <rect x="112" y="222" width="46" height="16" rx="4" fill="#F8FBFD" stroke="#C8D1DA"/>
+  </g>
+  <rect x="184" y="68" width="434" height="242" rx="12" fill="#E7EEF3" stroke="#D1D9E0"/>
+  <g stroke="#D6DEE5" stroke-width="1">
+    <path d="M222 130L420 54"/>
+    <path d="M222 160L454 70"/>
+    <path d="M222 190L488 86"/>
+    <path d="M222 220L522 102"/>
+    <path d="M222 250L556 118"/>
+    <path d="M222 280L590 134"/>
+    <path d="M262 112L408 304"/>
+    <path d="M302 96L448 288"/>
+    <path d="M342 80L488 272"/>
+    <path d="M382 64L528 256"/>
+    <path d="M422 48L568 240"/>
+  </g>
+  <path d="M304 166L418 110L508 178L395 233Z" fill="#3F5C72"/>
+  <path d="M304 166L395 233L385 292L296 227Z" fill="#304B5E"/>
+  <path d="M395 233L508 178L500 235L385 292Z" fill="#5B7487"/>
+  <path d="M458 250L553 208L618 258L523 300Z" fill="#AAB5BE"/>
+  <path d="M458 250L523 300L510 318L446 268Z" fill="#8D99A4"/>
+  <path d="M523 300L618 258L605 276L510 318Z" fill="#BCC5CC"/>
+</svg>

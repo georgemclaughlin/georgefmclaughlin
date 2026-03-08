@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" rx="24" fill="#06101F"/>
+  <rect x="12" y="12" width="616" height="336" rx="20" fill="url(#a)" stroke="#2C4E89"/>
+  <rect x="28" y="28" width="584" height="86" rx="18" fill="url(#b)" stroke="#315A9A"/>
+  <text x="44" y="62" fill="#EEF4FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Human Token</text>
+  <text x="44" y="98" fill="#EEF4FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Benchmarker</text>
+  <text x="360" y="58" fill="#93A7CC" font-family="Arial, sans-serif" font-size="11">Typing and voice throughput</text>
+  <rect x="30" y="132" width="178" height="72" rx="14" fill="#0B1930" stroke="#355D9D"/>
+  <rect x="230" y="132" width="178" height="72" rx="14" fill="#0B1930" stroke="#355D9D"/>
+  <rect x="430" y="132" width="178" height="72" rx="14" fill="#0B1930" stroke="#355D9D"/>
+  <text x="48" y="156" fill="#8FA5CC" font-family="Arial, sans-serif" font-size="12">Tokens / second</text>
+  <text x="48" y="190" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">142</text>
+  <text x="248" y="156" fill="#8FA5CC" font-family="Arial, sans-serif" font-size="12">Total tokens</text>
+  <text x="248" y="190" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">1,420</text>
+  <text x="448" y="156" fill="#8FA5CC" font-family="Arial, sans-serif" font-size="12">Characters / minute</text>
+  <text x="448" y="190" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">624</text>
+  <rect x="30" y="220" width="578" height="108" rx="16" fill="#071325" stroke="#2C4E89"/>
+  <path d="M54 284C95 246 140 259 180 243C220 227 259 237 300 206C340 175 389 188 430 174C470 160 516 145 584 110" stroke="#5D8DF0" stroke-width="5" stroke-linecap="round"/>
+  <path d="M54 300C91 278 136 291 177 274C218 257 256 264 297 245C338 226 388 231 429 222C470 213 523 214 584 190" stroke="#89B3FF" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="300" cy="206" r="7" fill="#FFE082"/>
+  <text x="316" y="212" fill="#DCE7FF" font-family="Arial, sans-serif" font-size="12">10-second run</text>
+  <defs>
+    <linearGradient id="a" x1="12" y1="12" x2="628" y2="348" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1830"/>
+      <stop offset="1" stop-color="#071220"/>
+    </linearGradient>
+    <linearGradient id="b" x1="28" y1="28" x2="612" y2="114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10203C"/>
+      <stop offset="1" stop-color="#0D1731"/>
+    </linearGradient>
+  </defs>
+</svg>
