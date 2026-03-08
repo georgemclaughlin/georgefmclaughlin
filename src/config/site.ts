@@ -10,12 +10,12 @@ export const siteConfig = {
   location: "Based in the United States",
   links: [
     {
-      label: "GitHub",
-      href: "https://github.com/georgemclaughlin",
-    },
-    {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/georgefmclaughlin/",
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/georgemclaughlin",
     },
   ],
 } as const;
