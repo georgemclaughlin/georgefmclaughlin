@@ -6,6 +6,7 @@ type Props = {
 };
 
 const { project } = Astro.props;
+const imageSrc = project.image ? `${import.meta.env.BASE_URL}${project.image}` : undefined;
 ---
 
 <article class="project card">
@@ -25,8 +26,8 @@ const { project } = Astro.props;
         !project.image && "image-wrap-placeholder",
       ]}
     >
-      {project.image ? (
-        <img src={project.image} alt={`${project.title} logo or preview`} loading="lazy" />
+      {imageSrc ? (
+        <img src={imageSrc} alt={`${project.title} logo or preview`} loading="lazy" />
       ) : (
         <div class="placeholder-mark" aria-hidden="true">
           <span>{project.imageLabel ?? project.title}</span>
